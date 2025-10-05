@@ -10,3 +10,6 @@ function checkNpmVersion() {
 }
 checkNpmVersion();
 
+function displayEnvironmentInfo (){
+  
+}
