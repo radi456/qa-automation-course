@@ -14,6 +14,10 @@ let debugMode = true;
 let runSlowTests = false;
 let useTestData = true;
 
-function validateEmail(){
-    
-}
+function validateEmail(mail){
+    console.log("Validation email format:" + testUserEmail.includes ('@'));
+    console.log("Validation email format:" + testUserEmail.includes ('.'));
+    if (testUserEmail.includes ('@') && testUserEmail.includes ('.')){
+        return true;
+    } else {return false;}
+console.log("Test of email validation format:" +validateEmail(testUserEmail));}
