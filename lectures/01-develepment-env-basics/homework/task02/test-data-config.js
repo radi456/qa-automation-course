@@ -12,7 +12,7 @@ let expectedWelcomeMessage = "Welcome to your dashboard";
 
 let debugMode = true;
 let runSlowTests = false;
-let useTestData = true;
+let userTestData = true;
 
 function validateEmail(mail) {
   console.log("Validation email format:" + testUserEmail.includes("@"));
@@ -28,9 +28,31 @@ function validateEmail(mail) {
 }
 
 function validatePassword(password) {
-  console.log(
-    "Pasword lenght is less than 8 characters:" + testUserPasword.length < 8
-  );
-  return false;
-  console.log();
+  if (testUserPasword.length >= 8) {
+    return true;
+    console.log("Password length is valid");
+  } else {
+    console.log("Pasword lenght is not valid");
+  }
+}
+
+function generateUniqueEmail() {
+  const timestamp = Date.now();
+  const baseName = testUserEmail;
+  const email = baseName + timestamp + "@testmail.com";
+  console.log("Generated mail address:", email);
+}
+
+function logTestConfiguration() {
+  console.log("Base URL:" + BASE_URL);
+  console.log("Default timeout:" + DEFAULT_TIMEOUT);
+  console.log("Api endpoints:" + API_ENDPOINT);
+  console.log("Test user email:" + testUserEmail);
+  console.log("Test user password" + testUserPasword);
+  console.log("Admin user email:" + adminUserEmail);
+  console.log("Expected welcome message:" + expectedWelcomeMessage);
+  console.log("Debug mode:" + debugMode);
+  console.log("Run slow tests:" + runSlowTests);
+  console.log("Use test data:" + userTestData);
+  console.log("Current timestamp:", timestamp);
 }
