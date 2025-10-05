@@ -1,11 +1,11 @@
-function checkNodeVersion(requiredVersion) {
+function checkNodeVersion() {
   const currentVersion = process.version;
   console.log("Node.js version: " + currentVersion);
 }
-checkNodeVesrsion();
+checkNodeVersion();
 
 function checkNpmVersion() {
-  const currentNmpVersion = process.env.npm._version;
+  const currentNpmVersion = process.env.npm.version;
   console.log("Npm version: " + currentNmpVersion);
 }
-CheckNpmVesrion();
+checkNpmVersion();
