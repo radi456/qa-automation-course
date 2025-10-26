@@ -2,6 +2,7 @@
   "name": "qa-automation-course",
   "version": "1.0.0",
   "description": "\"QA automation course project for learning JavaScript and PlayWright\"",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

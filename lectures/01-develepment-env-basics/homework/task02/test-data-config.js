@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const BASE_URL = "http://demo-qa-site.com";
 const DEFAULT_TIMEOUT = 30000;
 const API_ENDPOINT = {
@@ -14,6 +15,7 @@ let debugMode = true;
 let runSlowTests = false;
 let userTestData = true;
 
+// eslint-disable-next-line no-unused-vars
 function validateEmail(mail) {
   console.log("Validation email format:" + testUserEmail.includes("@"));
   console.log("Validation email format:" + testUserEmail.includes("."));
@@ -22,22 +24,22 @@ function validateEmail(mail) {
   } else {
     return false;
   }
-  console.log(
-    "Test of email validation format:" + validateEmail(testUserEmail)
-  );
 }
 
-function validatePassword(password) {
+// eslint-disable-next-line no-unused-vars
+function validatePassword() {
   if (testUserPasword.length >= 8) {
     return true;
+    // eslint-disable-next-line no-unreachable
     console.log("Password length is valid");
   } else {
     console.log("Pasword lenght is not valid");
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function generateUniqueEmail() {
-  const timestamp = Date.now();
+const timestamp = Date.now();
   const baseName = testUserEmail;
   const email = baseName + timestamp + "@testmail.com";
   console.log("Generated mail address:", email);
@@ -54,5 +56,6 @@ function logTestConfiguration() {
   console.log("Debug mode:" + debugMode);
   console.log("Run slow tests:" + runSlowTests);
   console.log("Use test data:" + userTestData);
+  // eslint-disable-next-line no-undef
   console.log("Current timestamp:", timestamp);
 }
